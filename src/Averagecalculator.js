@@ -8,7 +8,7 @@ const AverageCalculator = () => {
 
     const handleInputChange = (e) => {
         setNumbers(e.target.value);
-        setError(null); // Clear any previous error message
+        setError(null);
     };
 
     const calculateAverage = () => {
@@ -32,7 +32,7 @@ const AverageCalculator = () => {
 
         const sum = numArray.reduce((acc, num) => acc + num, 0);
         const avg = sum / numArray.length;
-        setAverage(avg.toFixed(2)); // Display average with 2 decimal places
+        setAverage(avg.toFixed(2));
     };
 
     return (
@@ -41,7 +41,7 @@ const AverageCalculator = () => {
                 type="text"
                 placeholder="Enter numbers (comma-separated)"
                 value={numbers}
-                onChange={handleInputChange} 
+                onChange={handleInputChange}
                 className="input-box"
             />
             <button onClick={calculateAverage} className="calculate-button">Calculate Average</button>
